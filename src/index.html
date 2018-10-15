@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Speech Translate</title>
+  <meta name="description" content="" />
+  <meta name=viewport content="width=device-width,initial-scale=1" />
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet" />
+  <link href="index.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Speech Translate</h1>
+    <p>Example demo for Google Chrome (Desktop, Mobile) using:</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition" target="_blank">Web Speech Recogition</a></li>
+      <li><a href="https://cloud.google.com/translate/" target="_blank">Google Cloud Translation API</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Web Speech Synthesis</a></li>
+    </ul>
+    <div class="columns" id="demo">
+      <div class="disabled-message">
+          <h2>Features unavailable</h2>
+          <p>Your browser does not support speechRecognition and speechSynthesis</p>
+          <p>Try with <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a></p>
+      </div>
+      <div class="input">
+        <h2>Input</h2>
+        <div class="controls">
+          <select id="selectLanguage" onchange="SpeechTranslate.updateDialects()"></select>
+          <select id="selectDialect"></select>
+          <button id="buttonStart" onclick="SpeechTranslate.start(event)">Start</button>
+        </div>
+        <div class="results" id="textareaInput">
+          <span class="final" id="final_span"></span>
+          <span class="interim" id="interim_span">none</span>
+        </div>
+      </div>
+      <div class="output">
+        <h2>Output</h2>
+        <div class="controls">
+          <select id="selectVoice"></select>
+        </div>
+        <div class="results" id="textareaOutput">
+          <span class="final" id="final_voice"></span>
+          <span class="interim" id="interim_voice">none</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

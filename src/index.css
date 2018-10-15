@@ -1,0 +1,80 @@
+/* Speech Translate */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-weight: normal;
+  margin: 0 0 1rem 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 80rem;
+  padding: 2rem;
+}
+
+.input,
+.output {
+  margin-bottom: 1rem;
+}
+
+.disabled-message {
+  display: none;
+}
+
+.disable .disabled-message {
+  background-color: rgb(255, 238, 238);
+  border: 1px dashed rgb(216, 106, 106);
+  display: block;
+  margin: 1rem 0;
+  padding: 2rem;
+}
+
+.disable .input,
+.disable .output {
+  display: none;
+}
+
+.controls {
+  margin-bottom: 1rem;
+}
+
+.results {
+  border: 1px solid #eee;
+  padding: .5rem;
+}
+
+.interim {
+  color: gray;
+}
+
+.final {
+  color: black;
+  padding-right: 3px;
+}
+
+@media (min-width: 50rem) {
+  .columns {
+    display: flex;
+  }
+  .input,
+  .output {
+    width: 50%;
+  }
+  .input {
+    margin-right: .5rem;
+  }
+  .output {
+    margin-left: .5rem;
+  }
+}
