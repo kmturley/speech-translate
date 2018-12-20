@@ -250,7 +250,7 @@ var SpeechTranslate = (function () {
       var langInput = selectDialect.value.split('-')[0];
       var langOutput = selectVoice.value.split('-')[0];
       console.log('translate', langInput, langOutput, text);
-      this.load(`https://translation.googleapis.com/language/translate/v2/?q=${window.encodeURI(text)}?&source=${langInput}&target=${langOutput}&key=AIzaSyDhNr-mW5O7ygdAvW3GEiyPPmsfFwOvZe4`, function(response) {
+      this.load(`https://translation.googleapis.com/language/translate/v2/?q=${window.encodeURI(text)}?&source=${langInput}&target=${langOutput}&key=AIzaSyDTrDTHs5lMAuUstdLmaAjY-tB79_PMVj0`, function(response) {
         console.log('translate.success', response);
         var translation = response.data.translations[0].translatedText;
         final_voice.innerHTML += ' ' + translation;
